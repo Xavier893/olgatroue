@@ -61,7 +61,7 @@ export function Venue() {
               with a short-sleeve collared shirt and smart shoes (no sneakers).
             </p>
             <p className="text-gray-700">
-              <strong>No Kids Allowed!</strong>
+              <strong>Unfortunately no kids</strong>
             </p>
           </div>
         </div>

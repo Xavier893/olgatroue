@@ -101,8 +101,15 @@ export function RsvpForm() {
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg border border-white/30">
             <div className="text-center mb-8">
               <h3 className="font-serif text-2xl text-slate-800">
-                Kindly Respond by November 20, 2025
+                Kindly Respond by October 15, 2025
               </h3>
+            </div>
+
+            <div className="text-left mb-8">
+              <p className="text-slate-800 text-[16px]">
+                If you wish to give us a gift, we will gratefully accept a
+                contribution towards our honeymoon.
+              </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-8">
