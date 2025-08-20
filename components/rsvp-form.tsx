@@ -22,20 +22,30 @@ export function RsvpForm() {
     message: "",
   });
 
-  const [errors, setErrors] = useState<{ name?: string; attending?: string }>(
-    {}
-  );
+  const [errors, setErrors] = useState<{
+    name?: string;
+    attending?: string;
+    message?: string;
+  }>({});
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState<string | null>(null);
 
   const validate = () => {
-    const newErrors: { name?: string; attending?: string } = {};
+    const newErrors: { name?: string; attending?: string; message?: string } =
+      {};
+
     if (!formData.name.trim()) {
       newErrors.name = "Full name is required.";
     }
     if (!formData.attending) {
       newErrors.attending = "Please select if you’ll be joining us.";
     }
+
+    if (formData.attending === "Yes" && !formData.message.trim()) {
+      newErrors.message =
+        "Please include all the details in the plus one section.";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -167,15 +177,20 @@ export function RsvpForm() {
               {/* Special Message */}
               <div className="space-y-2">
                 <Label htmlFor="message" className="text-slate-800 font-medium">
-                  Special Message
+                  Are you bringing a plus one? *
                 </Label>
                 <Textarea
                   id="message"
                   value={formData.message}
                   onChange={(e) => handleChange("message", e.target.value)}
-                  className="border-slate-200 focus:border-emerald-500 rounded-lg min-h-[100px]"
-                  placeholder="Share your excitement or any special requests..."
+                  className={`border-slate-200 focus:border-emerald-500 rounded-lg min-h-[100px] ${
+                    errors.message ? "border-red-500" : ""
+                  }`}
+                  placeholder="If yes, please include their full name and details along with yours..."
                 />
+                {errors.message && (
+                  <p className="text-red-600 text-sm">{errors.message}</p>
+                )}
               </div>
 
               {/* Submit */}

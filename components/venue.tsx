@@ -36,7 +36,7 @@ export function Venue() {
                 <div className="space-y-2 text-gray-700">
                   <p className="font-medium">Kwatala Game Lodge</p>
                   <p>Dinokeng Reserve</p>
-                  <p className="mt-4 font-medium">2:00 PM</p>
+                  <p className="mt-4 font-medium">4:00 PM</p>
                 </div>
               </div>
             </div>

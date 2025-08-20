@@ -9,18 +9,13 @@ export function Hero() {
           src="/hero2.jpg?height=1080&width=1920"
           alt="Wedding couple"
           fill
-          objectFit="cover"
+          className="object-cover object-center object-[37%_60%] sm:object-[50%_50%]"
           priority
         />
       </div>
 
       {/* Dark overlay backdrop */}
       <div className="absolute inset-0 bg-black/25 z-0"></div>
-
-      {/* Floating decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl z-0"></div>
-      <div className="absolute bottom-32 right-16 w-24 h-24 bg-emerald-200/20 rounded-full blur-lg z-0"></div>
-      <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-amber-200/15 rounded-full blur-md z-0"></div>
 
       {/* Foreground text */}
       <div className="relative z-10 text-center text-white px-4">
