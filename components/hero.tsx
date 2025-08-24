@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative py-40 sm:py-0 sm:h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero2.jpg?height=1080&width=1920"
+          src="/hero2.jpg"
           alt="Wedding couple"
           fill
-          className="object-cover object-center object-[37%_60%] sm:object-[50%_50%]"
+          className="object-cover object-center object-[38%_60%]"
           priority
         />
       </div>
