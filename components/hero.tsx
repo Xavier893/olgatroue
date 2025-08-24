@@ -9,7 +9,7 @@ export function Hero() {
           src="/hero2.jpg"
           alt="Wedding couple"
           fill
-          className="object-cover object-center object-[38%_60%]"
+          className="object-cover object-center object-[32%_60%]"
           priority
         />
       </div>
